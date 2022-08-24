@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronted Award</title>
+</head>
+<style>
+    * {
+        /* margin: 0; */
+        padding: 0;
+        list-style: none;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    body {
+        font-family: Poppins;
+        max-width: 1120px;
+        margin: auto;
+        height: 80vh;
+        border: 0.1px solid #F6F6F6;
+        position: relative;
+        box-shadow: 0px 0px 1px 1px #DDDDDD;
+        padding: 4%;
+    }
+
+
+
+    body .container .logo-gauche {
+        width: 10%;
+        border-radius: 50%;
+        margin-top: 7%;
+        animation: logo 2s infinite;
+        display: block;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    body .container .logo-gauche:hover {
+        animation: rota 2s infinite;
+    }
+
+    body .container .evo {
+        font-style: italic;
+        font-size: 1.5em;
+        color: #EF6629;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container .navlink ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+    }
+
+    .container .navlink ul li {
+        margin: 0px 50px;
+    }
+
+    .container ul li a {
+        font-size: 1.2em;
+        color: #3F525A;
+    }
+
+    .container ul li:hover {
+        animation: text 1s forwards;
+    }
+    h5{
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+    @keyframes logo {
+        0% {
+            transform: scale(1);
+        }
+
+        30% {
+            box-shadow: 0px 0px 1px 1px #73919D;
+        }
+
+        100% {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px 2px #73919D;
+        }
+    }
+
+    @keyframes text {
+        0% {
+            transform: scale(1);
+        }
+
+
+        100% {
+            transform: scale(1.4);
+        }
+    }
+
+    @keyframes rota {
+        0% {
+            transform: rotate(0deg);
+            transform: scale(1);
+        }
+
+        30% {
+            transform: scale(1.5);
+            box-shadow: 0px 0px 1px 1px #2b3751;
+        }
+
+        55% {
+
+            box-shadow: 0px 0px 3px 2px #2b3751;
+        }
+
+        100% {
+
+            transform: scale(2);
+            box-shadow: 0px 0px 14px 3px #2b3751;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="../image/logo0.svg" class="logo-gauche">
+        <div class="navlink">
+            <ul>
+                <li><a href="./Tamby.html">Tamby</a> </li>
+                <li><a href="./Clairio.html">Clairio</a> </li>
+                <li><a href="./Leo.html">Leo</a> </li>
+                <li><a href="./Eddy.html">Eddy</a> </li>
+                <li><a href="./Karene.html">Karene</a> </li>
+            </ul>
+        </div>
+        <h5>Lien vers :</h5>
+        <h1>Team <span class="evo"> Evolutech</span></h1>
+    </div>
+</body>
+
+</html>
