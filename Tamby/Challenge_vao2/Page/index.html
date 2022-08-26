@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- <span class="cursor-circle"></span> -->
+    <div class="souris"></div>
+    <div class="nav">
+        <img src="../image/logo0.svg" class="logo-gauche">
+        <div class="nav-links">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="non-active">Abouts</a></li>
+                <li><a href="#" class="non-active">Contacts</a></li>
+                <li><a href="#" class="non-active">Autres</a></li>
+            </ul>
+        </div>
+
+        <div class="div-theme">
+            <div class="theme-template">
+                <ul>
+                    <li>black</li>
+                    <li>purple</li>
+                    <li>green</li>
+                </ul>
+            </div>
+            <div class="theme">
+                <button class="logo-droite"></button>
+                <img src="../image/soleil.png" class="logo-droite">
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="secteur1">
+            <div class="left">
+                <img src="../image/fondt.svg" class="ft">
+                <h6>
+                    <span class="th1">Notre nouvelle application<br> </span>
+                    <span class="app">Evolutech<span>Team</span> </span> <br>
+                    <!-- <span class="th2">Faites nous confiance </span> -->
+                </h6>
+            </div>
+            <div class="right">
+                <img src="../image/anime2.svg" class="logo-gauches">
+            </div>
+        </section>
+        <section class="secteur2"></section>
+    </main>
+</body>
+<script>
+    const logod = document.querySelector('.theme');
+    const themeTemplate = document.querySelector('.theme-template');
+    logod.addEventListener('click', () => {
+        if (themeTemplate.style.opacity == '1') {
+            themeTemplate.style.opacity = '0%';
+            logod.style.scale = '1';
+            logod.style.animation = 'logod 0s infinite';
+            logod.style.transition = 'all 0.5s ease'
+        } else {
+            logod.style.scale = '1.2';
+            logod.style.animation = 'logod 3s infinite';
+            themeTemplate.style.opacity = '100%'
+            themeTemplate.style.transition = 'all 0.5s ease'
+        }
+    })
+
+</script>
+<script src="../js/main.js"></script>
+<script src="../js/center.js"></script>
+
+</html>
