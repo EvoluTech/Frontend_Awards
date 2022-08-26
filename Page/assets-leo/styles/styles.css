@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+  }
+  
+.assassin{
+    position: absolute;
+    left: 40px;
+    background-image: url("../assassin.png");
+    background-size:400px;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+}
+/* .assassin::after{
+    transform:inherit;
+    position: absolute;
+    content:"";
+    background-repeat: no-repeat;
+    background-color: #fff;
+    transform: rotateZ(30deg);
+    width: 0px;
+    height: 500px;
+    z-index: 70;
+    transform-origin: 200px 100px;
+    animation: erasexD 1s ease-in-out forwards;
+
+} */
+
+.fighter{
+    position: absolute;
+    background-image: url("../fighter.png");
+    background-color: #fff;
+    background-size:400px;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 0px;
+    animation: affichePerso 1s ease-in-out 1s forwards;
+}
+/*soit after ou un autre div ....avec cette derniere on peut l animer de maniere dynamique xD*/
+.fighter::after{
+    position :absolute;
+    content: "";
+    background-color:#fff;
+    width: 80px;
+    height: 500px;
+    transform: rotate(30deg);
+    transform-origin: 200px 100px;
+    animation:poseX 1s ease-in-out 1s forwards
+}
+
+/*positionnement svt x image*/
+@keyframes poseX {
+    100%{
+        transform: translateX(500px);
+    }
+}
+
+/*affichage perso xD*/
+@keyframes affichePerso {
+    100%{
+        width:500px;
+    }
+}
