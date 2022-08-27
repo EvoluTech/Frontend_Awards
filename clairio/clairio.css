@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
+@media screen and (max-width: 910px) {
+    nav ul{
+        visibility: hidden;
+       
+    }
+  }
 * {
    
     list-style: none;
@@ -6,34 +12,40 @@
     font-family: 'Poppins';
     font-weight: 100;
     text-decoration: none;
+ box-sizing: border-box;
 
 }
+html {
+    margin: 0;
+   
+}
+
 
 body{
     margin: 0;
-    overflow-x: hidden;
+    width: 100%;
 
 }
 nav {
     position: absolute;
-    opacity: 0.9;
+   
     height: 90px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-right: 40px;
     padding-left: 25px;
    background-color: black;
-   box-shadow: 0px 0px 522px 0px rgb(44, 39, 39);
+   box-shadow: 0px 0px 150px 0px rgb(44, 39, 39);
 
    
     
 }
 nav h3 {
     font-weight: bold;
-    padding-right: 40%;
+    padding-right: 30%;
     text-shadow: 2px 2px 3px 0px;
     font-size: 1.5em;
     cursor: pointer;
@@ -52,9 +64,12 @@ nav ul{
     padding-right: 6px;
     flex-wrap: wrap;
     text-transform: uppercase;
+   
 }
+
+
 nav ul li {
- color: rgb(181, 77, 28);
+ color: rgb(225, 90, 28);
  font-weight: 300;
  padding: 15px;
  cursor: pointer;
@@ -71,11 +86,11 @@ nav ul li:hover {
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 58px;
     flex-wrap: wrap;
+   
 }
 .section div div img{
-    width: 500px;
+    width: 250px;
 }
 
 .section div .card2 img {
@@ -98,8 +113,18 @@ nav ul li:hover {
 }
 
 .section div .titre {
-    width: 50%;
+    width: 40%;
     height: 100%;
+ 
+    
+}
+.section div .titre h1{
+   font-size: 3em;
+   font-weight: 700;
+   width: 100vh;
+   padding-left: 20px;
+   padding-right: 20px;
+   filter: blur(0.5px,black);
  
     
 }
@@ -171,18 +196,38 @@ footer .social ul {
 footer .social ul li {
     padding: 2px;
 }
-
-.fleche img{
-    position: fixed;
-    top: 450px;
-    right: 15px;
-
-
+.section {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
 }
+
 .section .un {
-    background-image: url('../image/bg-demons-souls.png');
-    height: 100vh;
+    background-image: url('image/bg-demons-souls.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
 }
-.section .un .card img {
-    background-color: transparent;
+.section .un .titre {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+   color: antiquewhite;
+   width: 100%;
+   height: 10%;
+   transition: 1s;
+   margin-bottom: 45px;
+   margin-left: 5px;
+   margin-right: 10px;
 }
+
+.section .deux {
+  
+    box-shadow: 10px 0px 0px 0px rgb(44, 39, 39);
+}
+.section .trois {
+  
+    
+}
+
