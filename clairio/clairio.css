@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+* {
+   
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+    font-weight: 100;
+    text-decoration: none;
+
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+
+}
+nav {
+    position: absolute;
+    opacity: 0.9;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 40px;
+    padding-left: 25px;
+   background-color: black;
+   box-shadow: 0px 0px 522px 0px rgb(44, 39, 39);
+
+   
+    
+}
+nav h3 {
+    font-weight: bold;
+    padding-right: 40%;
+    text-shadow: 2px 2px 3px 0px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: rgb(64, 83, 91);
+    transition: 1s;
+   
+} 
+nav h3:hover {
+    transform: translateY(-5px);
+}  
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 6px;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+nav ul li {
+ color: rgb(181, 77, 28);
+ font-weight: 300;
+ padding: 15px;
+ cursor: pointer;
+}
+nav ul li:hover {
+    transform: scale(1.2);
+    padding: 0px 18px 0px 18px;
+    transition: 200ms;
+  
+}
+
+.section div {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 58px;
+    flex-wrap: wrap;
+}
+.section div div img{
+    width: 500px;
+}
+
+.section div .card2 img {
+   animation: miodina 1s ease-in-out backwards; 
+}
+
+@keyframes miodina {
+    0% {
+        opacity: 0;
+        transform: translateX(200px) rotate(1turn);
+    }
+    100% {
+        transform: translate(0px)
+    }
+}
+.section div .soratra {
+    width: 50%;
+    padding: 0px;
+    
+}
+
+.section div .titre {
+    width: 50%;
+    height: 100%;
+ 
+    
+}
+
+.reveal{
+    animation: slide 1.5s forwards;
+
+}
+
+.reveal-inverse{
+    animation: slide-inverse 1.5s forwards;
+
+}
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transition: 500ms;
+        transform: translateY(-50px);
+    }
+    70% {  
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes slide-inverse {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {  
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+footer {
+display: flex;
+flex-direction: row;
+align-content: center;
+justify-content: space-evenly;
+background-color: rgb(22, 20, 20);
+box-shadow: 0px 0px 25px 0px rgb(44, 39, 39);
+color: antiquewhite;
+flex-wrap: wrap;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+footer div ul {
+    padding-left: 5px;
+}
+footer .social ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  
+}
+
+footer .social ul li {
+    padding: 2px;
+}
+
+.fleche img{
+    position: fixed;
+    top: 450px;
+    right: 15px;
+
+
+}
+.section .un {
+    background-image: url('../image/bg-demons-souls.png');
+    height: 100vh;
+}
+.section .un .card img {
+    background-color: transparent;
+}
