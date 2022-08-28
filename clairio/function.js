@@ -1,3 +1,10 @@
+let modeToggle= document.querySelector('.mode-tog');
+let darkMode = document.querySelector('.dark-mode');
+modeToggle.addEventListener('click',() => {
+    darkMode.classList.toggle('active');
+    modeToggle.classList.toggle('active');
+})
+
 const ratio=.1
 const io = document.querySelector('.nav')
 const h1= document.querySelector('.titre h1')
