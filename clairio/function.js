@@ -30,7 +30,9 @@ const rotationSec2 = function (entries, sec2obs) {
     console.log(entry.intersectionRatio)
     if (entry.intersectionRatio > ratio) {
      mio.classList.add('miodina')
-      sec2obs.unobserve(entry.target)
+      // sec2obs.unobserve(entry.target)
+    }else{
+      mio.classList.remove('miodina')
     }
   });
 
