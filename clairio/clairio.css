@@ -148,6 +148,10 @@ nav ul li:hover {
   transform: translateX(-150px);
   opacity: 0;
 }
+.section div .titre p {
+    transform: translateX(150px);
+    opacity: 0;
+}
 
 
 
@@ -157,10 +161,10 @@ nav ul li:hover {
 
 
 .reveal-verse {
-  animation: slide-verse 1s forwards;
+  animation: slide-verse 1s 300ms forwards;
 }
 .reveal-inverse {
-  animation: slide-inverse 1s 1s backwards;
+  animation: slide-inverse 1s 300ms forwards;
 }
 
 @keyframes slide {
@@ -175,13 +179,10 @@ nav ul li:hover {
   }
 }
 @keyframes slide-inverse {
-  0% {
-  }
-  99% {
-    opacity: 1;
-  }
+ 
   100% {
     transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -243,7 +244,7 @@ footer .social ul li {
 
 .mode-tog.active{
     background-color: white;
-    transition: 1000ms;
+    transition: 300ms;
 }
 .container{
     position:absolute;
@@ -263,8 +264,8 @@ footer .social ul li {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 410vh;
-    height: 410vh;
+    width: 416.5vh;
+    height: 416.5vh;
     border-radius: 50%;
     background-color: rgb(94, 91, 91);
     transition: 1s;
@@ -278,6 +279,7 @@ footer .social ul li {
         border-radius: 50%;
       
     }
+    
     100% {
         background-color: transparent;
     }
@@ -290,5 +292,5 @@ footer .social ul li {
 
   .dark-mode.active{
     transform: scale(1);
-    animation: manova 1.5s  forwards ;
+    animation: manova 1000ms  forwards ;
 } 
