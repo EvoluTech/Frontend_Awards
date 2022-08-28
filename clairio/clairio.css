@@ -1,238 +1,221 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins'); */
 @media screen and (max-width: 910px) {
-    nav ul{
-        visibility: hidden;
-       
-    }
+  nav ul {
+    visibility: hidden;
   }
+}
 * {
-   
-    list-style: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins';
-    font-weight: 100;
-    text-decoration: none;
- box-sizing: border-box;
-
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+  font-weight: 100;
+  text-decoration: none;
+  box-sizing: border-box;
 }
+.section .un {
+    background-image: url("image/bg-demons-souls.png");
+    background-size: cover;
+    height: 800px;
+  }
 html {
-    margin: 0;
-   
+  margin: 0;
 }
 
-
-body{
-    margin: 0;
-    width: 100%;
-
+body {
+  margin: 0;
+  width: 100%;
 }
 nav {
-    position: absolute;
-   
-    height: 90px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-right: 40px;
-    padding-left: 25px;
-   background-color: black;
-   box-shadow: 0px 0px 150px 0px rgb(44, 39, 39);
+  position: absolute;
 
-   
-    
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 40px;
+  padding-left: 25px;
+  background-color: black;
+  box-shadow: 0px 0px 150px 0px rgb(44, 39, 39);
 }
 nav h3 {
-    font-weight: bold;
-    padding-right: 30%;
-    text-shadow: 2px 2px 3px 0px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: rgb(64, 83, 91);
-    transition: 1s;
-   
-} 
+  font-weight: bold;
+  padding-right: 30%;
+  text-shadow: 2px 2px 3px 0px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: rgb(64, 83, 91);
+  transition: 1s;
+}
 nav h3:hover {
-    transform: translateY(-5px);
-}  
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 6px;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-   
+  transform: translateY(-5px);
 }
 
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 6px;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
 
 nav ul li {
- color: rgb(225, 90, 28);
- font-weight: 300;
- padding: 15px;
- cursor: pointer;
+  color: rgb(225, 90, 28);
+  font-weight: 300;
+  padding: 15px;
+  cursor: pointer;
 }
 nav ul li:hover {
-    transform: scale(1.2);
-    padding: 0px 18px 0px 18px;
-    transition: 200ms;
-  
+  transform: scale(1.2);
+  padding: 0px 18px 0px 18px;
+  transition: 200ms;
 }
 
 .section div {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-   
-}
-.section div div img{
-    width: 250px;
-}
-
-.section div .card2 img {
-   animation: miodina 1s ease-in-out backwards; 
-}
-
-@keyframes miodina {
-    0% {
-        opacity: 0;
-        transform: translateX(200px) rotate(1turn);
-    }
-    100% {
-        transform: translate(0px)
-    }
-}
-.section div .soratra {
-    width: 50%;
-    padding: 0px;
-    
-}
-
-.section div .titre {
-    width: 40%;
-    height: 100%;
- 
-    
-}
-.section div .titre h1{
-   font-size: 3em;
-   font-weight: 700;
-   width: 100vh;
-   padding-left: 20px;
-   padding-right: 20px;
-   filter: blur(0.5px,black);
- 
-    
-}
-
-.reveal{
-    animation: slide 1.5s forwards;
-
-}
-
-.reveal-inverse{
-    animation: slide-inverse 1.5s forwards;
-
-}
-
-
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transition: 500ms;
-        transform: translateY(-50px);
-    }
-    70% {  
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-@keyframes slide-inverse {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80% {  
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-footer {
-display: flex;
-flex-direction: row;
-align-content: center;
-justify-content: space-evenly;
-background-color: rgb(22, 20, 20);
-box-shadow: 0px 0px 25px 0px rgb(44, 39, 39);
-color: antiquewhite;
-flex-wrap: wrap;
-}
-footer div{
-    display: flex;
-    flex-direction: column;
-   
-   
-}
-footer div ul {
-    padding-left: 5px;
-}
-footer .social ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  
-}
-
-footer .social ul li {
-    padding: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .section {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
 }
 
-.section .un {
-    background-image: url('image/bg-demons-souls.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 800px;
-}
+
 .section .un .titre {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-around;
-   color: antiquewhite;
-   width: 100%;
-   height: 10%;
-   transition: 1s;
-   margin-bottom: 45px;
-   margin-left: 5px;
-   margin-right: 10px;
-}
-
-.titre h1 {
-    opacity: 0.7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: antiquewhite;
+  width: 100%;
+  height: 10%;
+  transition: 1s;
+  margin-bottom: 45px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 .section .deux {
-  
-    box-shadow: inset 2px 2px 2px 2px gold;
-    padding: 8px;
+  box-shadow: inset 2px 2px 2px 2px gold;
+  padding: 8px;
 }
 .section .trois {
-  
-    
+}
+.section div div img {
+  width: 250px;
 }
 
+.miodina {
+  animation: miodina 2s ease-in-out backwards alternate;
+}
+
+@keyframes miodina {
+  0% {
+    opacity: 0;
+    transform: translateX(75px) rotate(1turn);
+    filter: blur(1px);
+  }
+  65% {
+    transform: translateX(-175px) rotate(-0.5turn);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.section div .soratra {
+  width: 50%;
+  padding: 0px;
+}
+
+.section div .titre {
+  width: 40%;
+  height: 100%;
+}
+.section div .titre h1 {
+  font-size: 3em;
+  font-weight: 700;
+  width: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  filter: blur(0.5px, black);
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+
+
+.reveal {
+  animation: slide 500ms backwards;
+}
+
+
+.reveal-verse {
+  animation: slide-verse 1s forwards;
+}
+.reveal-inverse {
+  animation: slide-inverse 1s 1s backwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-50px);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-inverse {
+  0% {
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes slide-verse {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  background-color: rgb(22, 20, 20);
+  box-shadow: 0px 0px 25px 0px rgb(44, 39, 39);
+  color: antiquewhite;
+  flex-wrap: wrap;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+footer div ul {
+  padding-left: 5px;
+}
+footer .social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer .social ul li {
+  padding: 2px;
+}
