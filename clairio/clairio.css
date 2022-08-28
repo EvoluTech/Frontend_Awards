@@ -224,10 +224,10 @@ footer .social ul li {
 
 /* dark mode */
 .mode-tog{
-    background-color: black;
+    background-color: gray;
     position: absolute;
     right: 52px;
-    top: 26px;
+    top: 33px;
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -236,6 +236,11 @@ footer .social ul li {
     border-radius: 0%;
 
 }
+.mode-tog button {
+    width: 20px;
+    height: 20px;
+}
+
 .mode-tog.active{
     background-color: white;
     transition: 1000ms;
@@ -245,11 +250,11 @@ footer .social ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 50px;
-    top: 50px;
+    right: 52px;
+    top: 33px;
     width: 20px;
     height: 20px;
-
+    opacity: 0.8;
 }
 .dark-mode{
     position: relative;  
@@ -258,30 +263,22 @@ footer .social ul li {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 440vh;
-    height: 440vh;
+    width: 410vh;
+    height: 410vh;
     border-radius: 50%;
-    background-color: #894889;
-    transition: 1000ms ease-in-out;
+    background-color: rgb(94, 91, 91);
+    transition: 1s;
     display: flex;
     flex: 0 0 auto;
+    opacity: 0.8;
    
 }
 @keyframes manova {
     0% {
         border-radius: 50%;
-        background-color: #584358;
-    }
-    75% {
-        border-radius: 50%;
-        background-color: #574e57;
-    }
-    95%{
-        border-radius: 45%;
-        background-color: #464046;
+      
     }
     100% {
-        border-radius: 0%;
         background-color: transparent;
     }
 }
@@ -293,6 +290,5 @@ footer .social ul li {
 
   .dark-mode.active{
     transform: scale(1);
-    animation: manova 1s ease-in-out forwards ;
-    transition: 1000ms ease-in-out;
+    animation: manova 1.5s  forwards ;
 } 
