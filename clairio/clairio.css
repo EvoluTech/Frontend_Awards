@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 @media screen and (max-width: 910px) {
   nav ul {
     visibility: hidden;
@@ -223,8 +223,8 @@ footer .social ul li {
 }
 
 
-/* dark mode */
-.mode-tog{
+/* dark mode V1*/
+/* .mode-tog{
     background-color: gray;
     position: absolute;
     right: 52px;
@@ -264,8 +264,8 @@ footer .social ul li {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 416.5vh;
-    height: 416.5vh;
+    width: 416vh;
+    height: 414vh;
     border-radius: 50%;
     background-color: rgb(94, 91, 91);
     transition: 1s;
@@ -293,4 +293,62 @@ footer .social ul li {
   .dark-mode.active{
     transform: scale(1);
     animation: manova 1000ms  forwards ;
-} 
+}  */
+
+
+
+
+/* DARK MODE V2 */
+
+/* mbola andalana mpanamboarana ny version 2 dark mode */
+
+/* .clip {
+  z-index: 2;
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 100%;
+  background-color: black;
+}
+.anim {
+  -webkit-animation: open 1.5s ease-in;
+          animation: open 1.5s ease-in;
+}
+@-webkit-keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
+@keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+} */

@@ -1,5 +1,6 @@
 let modeToggle= document.querySelector('.mode-tog');
 let darkMode = document.querySelector('.dark-mode');
+let clip =document.querySelector('.clip')
 modeToggle.addEventListener('click',() => {
     darkMode.classList.toggle('active');
     modeToggle.classList.toggle('active');
@@ -46,6 +47,6 @@ const rotationSec2 = function (entries, sec2obs) {
 }
 
 const sec2obs = new IntersectionObserver(rotationSec2, options); 
-sec2obs.observe(document.querySelector(".card2 img"))
+sec2obs.observe(document.querySelector(".card2"))
 
 
