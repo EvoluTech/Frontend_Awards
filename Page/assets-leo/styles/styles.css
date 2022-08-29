@@ -38,7 +38,6 @@ html {
 
 /*soit after ou un autre div ....avec cette derniere on peut l animer de maniere dynamique xD*/
 .barre{
-    overflow: hidden;
     left: -50px;
     position :absolute;
     content: "";
@@ -174,20 +173,21 @@ html {
  /*arrows*/
  .arrow-n , .arrow-p{
   position: absolute;
-  font-size: 50px;
+  font-size: 125px;
   color: rgb(20, 20, 20);
   cursor: pointer;
   display: inline-block;
-  left: 15%;
-  transform: rotate(-90deg);
-  
+
+
+  top:80%;
+  z-index: 99;
 }
 
 
 .arrow-n {
-  top: 35%;
+  left:11%;
 }
 .arrow-p{
-  top: 45%;
+  left:55%;
 }
 /*fin arrows xD*/

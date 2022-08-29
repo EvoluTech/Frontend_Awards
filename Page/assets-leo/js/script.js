@@ -1,4 +1,5 @@
 /*sarahana fonctionnalité samy hafa xD*/
+/* Mbola ts vita de mbola mila ataoko maj ireo anarana ambany ireo xD */
 var t = document.querySelectorAll(".cardxD");
 var img = document.querySelectorAll(".default");
 var barre = document.querySelector(".barre");
@@ -57,16 +58,18 @@ function init0(tabb){
 }
 //misy blem eto xD
 //boucle prev
+//mampiova anazy xD
 function previous(tab){
-
+  
   for(var i = 0;i<n ; i++ ){
     if(tab[i][p]==0){
-      
       //exp xD
         console.log('prev =0')
         //a regler xD
-        tab[i].style.transform="rotateZ(90deg)";
-        tab[i].style.animation="rotate2 0.7s ease-in-out forwards";
+        tab[i].style.zIndex=""+(n)+"";
+        tab[i].style.width="500px";
+        tab[i].style.animation="";
+        
     }
     tab[i][p]+=1;
     console.log("p",i,tab[i][p])
@@ -75,23 +78,35 @@ function previous(tab){
   for(var i=0 ; i<n ; i++){
     if(tab[i][p]==n){
       //deb
+      
       console.log('debut xD')
       tab[i][p]=0;
+      tab[i].style.zIndex=""+(n)+"";
     }
 
   }
 }
 
+//init zIndex xD
+function initZ(tab){
+  for(var i=0 ; i<n;i++){
+    tab[i].style.zIndex=""+i+"";
+  }
+}
+
 //next function
+//mampiova anazy xD
 function nextxD(tab){
   for(var i = 0;i<n ; i++ ){
-
+    
+    console.log(tab[i].style.zIndex);
     if(tab[i][p]==0){
       //exp xD
       //A regler
-        console.log('exp xD')
-        tab[i].style.transform="rotateZ(90deg)";
-        tab[i].style.animation="rotate3 0.7s ease-in-out forwards";
+        console.log('exp xD');
+        tab[i].style.zIndex=""+n+"";
+        tab[i].style.animation="reverseX 0.8s ease-in-out forwards";
+
     }
     tab[i][p]-=1;
     console.log("nb de p"+tab[i][p])
@@ -109,15 +124,17 @@ function nextxD(tab){
 }
 
 
+//reset position xD
 
-
-//affichage init rehefa mampiala an ilay zavatra misy eo
+//affichage apres clic ou au debut xD
 function init(tab,e){ 
   if(e=="prev"){
     for(var i = 0 ; i<n ;i++){
       if(tab[i][p]==0){
         //a regler xD
-        barre.style.animation="poseX 0.8s ease-in-out  forwards"
+        tab[i].style.zIndex=""+(n+1)+"";
+        //ato no misy bleme à regler xD
+        tab[i].style.width="0px";
         tab[i].style.animation="affichePerso 0.8s ease-in-out 0.08s forwards";
       }
     }
@@ -125,8 +142,9 @@ function init(tab,e){
     for(var i = 0 ; i<n ;i++){
       if(tab[i][p]==0){
         //A regler xD
-        barre.style.animation="poseX 0.8s ease-in-out  forwards"
-        tab[i].style.animation="affichePerso 0.8s ease-in-out 0.08s forwards";
+        tab[i].style.zIndex=""+(i-1)+"";
+        barre.style.animation="poseX 0.8s ease-in-out  forwards";
+        tab[i].style.animation="affichePerso 0.001s ease-in-out 0.08s forwards";
       }
     }
   }
@@ -134,6 +152,7 @@ function init(tab,e){
 }
 
 var e="prev";
+
 init0(t);
 init0(img);
 init(img,e);
@@ -141,23 +160,28 @@ init(img,e);
 //afaka ameliorena ny animation xD(genre plus fluide et plus concret xD)
 /*prev arrow xD*/
 prev.addEventListener("click" , function(){
+
+  initZ(img)
   test=true;
   init_p(t);
   p_mini_nav(t);
   var e ="prev";
-  init(img,e);
   previous(img);
+  init(img,e);
+  
   
 
 })
 /*next arrow*/
 next.addEventListener("click", function(){
+  initZ(img)
   test=false;
   init_n(t);
   p_mini_nav(t);
   var e="next"
-  init(img,e);
   nextxD(img);
+  init(img,e);
+  
   
 
 })
@@ -259,7 +283,7 @@ var nexts = document.querySelector(".arrow-next");
 
       prevs.onclick = function(){
         //slide haut prev
-
+        initZ(img)
         var e ="prev";
         previous(img);
         init(img,e);
@@ -272,7 +296,7 @@ var nexts = document.querySelector(".arrow-next");
         init_p(t);
         p_mini_nav(t);
         console.log(document.querySelector(".next"));
-        console.log("next clicked xD");
+        console.log("prevv clicked xD");
       };
       
       function init_n(t){
@@ -288,12 +312,11 @@ var nexts = document.querySelector(".arrow-next");
 
        //next mini_slide
        nexts.onclick= () =>{
-
+        initZ(img)
         //slide haut next xD
         var e="next"
         nextxD(img);
         init(img,e);
-         
         test=false;
         test=false;
         //faut rendre tout ç en tant que fonction xD 
