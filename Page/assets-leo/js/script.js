@@ -1,5 +1,5 @@
 /*sarahana fonctionnalité samy hafa xD*/
-/* Mbola ts vita de mbola mila ataoko maj ireo anarana ambany ireo xD */
+
 var t = document.querySelectorAll(".cardxD");
 var img = document.querySelectorAll(".default");
 var barre = document.querySelector(".barre");
@@ -46,8 +46,8 @@ var p;
 var n=img.length
 
 //a regler
-var prev=document.querySelector(".arrow-p");
-var next=document.querySelector(".arrow-n");
+var next=document.querySelector(".arrow-p");
+var prev=document.querySelector(".arrow-n");
 
 //function initialisation value in tab xD
 function init0(tabb){
@@ -105,6 +105,8 @@ function nextxD(tab){
       //A regler
         console.log('exp xD');
         tab[i].style.zIndex=""+n+"";
+        barre.style.zIndex=""+n+1+"";
+
         tab[i].style.animation="reverseX 0.8s ease-in-out forwards";
 
     }
@@ -150,7 +152,17 @@ function init(tab,e){
   }
 
 }
-
+//***amboaro ito fa aza kamo2 xD!!! */
+function barrexD(v){
+  if(v=="prev"){
+    barre.style.transform="";
+    barre.style.animation="";
+  }else if(v=="next"){
+    barre.style.transform="";
+    barre.style.animation="";
+  }
+}
+var value;
 var e="prev";
 
 init0(t);
