@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  max-width: 1120px;
+  margin: auto;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: row;
+}
+body .text .text-anime {
+  color: rgb(23, 39, 74);
+}
+body .text .text-anime span:not(.fade) {
+  opacity: 0;
+  transform: translateY(50%) rotate(90deg);
+}
+body .text .text-anime span {
+  transition: all 0.4s;
+  display: inline-block;
+}
+body .text .typing span.fade + span:not(.fade) {
+  transition: none;
+  transform: none;
+  background-color: rgba(8, 28, 72, 0.896);
+  opacity: 1;
+  color: rgba(24, 57, 108, 0.613);
+}
+body .text .typing--autre span.fade + span:not(.fade) {
+  transition: none;
+  transform: translateY(-50%) rotate(10deg);
+  background-color: rgba(57, 48, 37, 0.896);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--flou span.fade + span:not(.fade) {
+  transition: none;
+  transform: translateX(-50%) rotate(180deg);
+  background-color: rgba(57, 48, 37, 0.896);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--scale span.fade + span:not(.fade) {
+  transition: none;
+  transform: scale(4);
+  background-color: rgba(80, 75, 75, 0.515);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--left span.fade + span:not(.fade) {
+  transition: none;
+  margin-left: -100%;
+  background-color: rgba(80, 75, 75, 0.515);
+  color: rgba(60, 63, 67, 0.613);
+}
+
+
+/*# sourceMappingURL=style.css.map */

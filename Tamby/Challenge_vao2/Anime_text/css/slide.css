@@ -1,0 +1,69 @@
+.container .slide-image {
+  background-color: rgb(255, 255, 255);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("../image/a1.png");
+}
+
+
+.fighter {
+  position: absolute;
+  background-image: url("../image/fighter.png");
+  background-color: rgb(255, 255, 255);
+  background-size: 400px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.assassin {
+  position: absolute;
+  background-image: url("../image/assassin.png");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-color: rgb(253, 253, 253);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.opacity {
+  opacity: 1;
+}
+
+/*soit after ou un autre div ....avec cette derniere on peut l animer de maniere dynamique xD*/
+.opacity::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(244, 241, 241, 0.453);
+  width: 0px;
+  height: 100%;
+  top: 0px;
+  left: -10px;
+  transform: rotate(30deg);
+  animation: affichePerso 0.5s ease;
+}
+
+/*positionnement svt x image*/
+@keyframes poseX {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+/*affichage perso xD*/
+@keyframes affichePerso {
+  100% {
+    width: 30%;
+    height: 150%;
+    transform: translateX(500px);
+    top: 0px;
+    /* transform: rotate(30deg); */
+    right: 0px;
+  }
+}

@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  max-width: 1120px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body .text .text-anime {
+  color: rgb(23, 39, 74);
+}
+body .text .text-anime span:not(.fade) {
+  opacity: 0;
+  transform: translateY(50%) rotate(90deg);
+}
+body .text .text-anime span {
+  transition: all 0.4s;
+  display: inline-block;
+}
+body .text .typing span.fade + span:not(.fade) {
+  transition: none;
+  transform: none;
+  background-color: rgba(8, 28, 72, 0.896);
+  opacity: 1;
+  color: rgba(24, 57, 108, 0.613);
+}
+body .text .typing--autre span.fade + span:not(.fade) {
+  transition: none;
+  transform: translateY(-50%) rotate(10deg);
+  background-color: rgba(57, 48, 37, 0.896);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--flou span.fade + span:not(.fade) {
+  transition: none;
+  transform: translateX(-50%) rotate(180deg);
+  background-color: rgba(57, 48, 37, 0.896);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--scale span.fade + span:not(.fade) {
+  transition: none;
+  transform: scale(4);
+  background-color: rgba(80, 75, 75, 0.515);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .text .typing--left span.fade + span:not(.fade) {
+  transition: none;
+  margin-left: -100%;
+  background-color: rgba(80, 75, 75, 0.515);
+  color: rgba(60, 63, 67, 0.613);
+}
+body .block-souris {
+  background-color: rgba(241, 242, 249, 0.767);
+  padding: 5%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+body .block-souris .tsotra {
+  font-size: 1.6em;
+  color: rgb(246, 241, 241);
+}
+body .block-souris .tsotra-normale {
+  font-size: 1em;
+  color: black;
+}
+body .souris {
+  background-color: rgba(241, 242, 249, 0.767);
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  z-index: 1;
+}
+body .sourisZoom {
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  opacity: 1;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+@keyframes anime {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
