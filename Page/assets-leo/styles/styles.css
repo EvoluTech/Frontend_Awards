@@ -1,52 +1,54 @@
 html {
     box-sizing: border-box;
-  }
-  
-.assassin{
+    font-family: "Poppins";
+    color: rgb(70, 70, 70);
+}
+
+
+
+.default{
     position: absolute;
     left: 40px;
-    background-image: url("../assassin.png");
     background-size:400px;
+    background-color: #fff;
     background-repeat: no-repeat;
     height: 500px;
-    width: 100%;
+    width: 0px;
     z-index: 0;
+    transform-origin: 200px 100px; 
+    /* animation: affichePerso 0.5s ease-in-out  forwards ; */
 }
-/* .assassin::after{
-    transform:inherit;
-    position: absolute;
-    content:"";
-    background-repeat: no-repeat;
-    background-color: #fff;
-    transform: rotateZ(30deg);
-    width: 0px;
-    height: 500px;
-    z-index: 70;
-    transform-origin: 200px 100px;
-    animation: erasexD 1s ease-in-out forwards;
 
-} */
 
-.fighter{
+/*
+    deux div avec class active et nonActive
+    active animation affichage png ou svg
+    nonActive z-index-1;
+*/
+.active{
     position: absolute;
-    background-image: url("../fighter.png");
     background-color: #fff;
     background-size:400px;
     background-repeat: no-repeat;
+    transform-origin: 200px 100px;
     height: 500px;
     width: 0px;
-    animation: affichePerso 1s ease-in-out 1s forwards;
+    /* animation: affichePerso 0.8s ease-in-out 0.5s forwards; */
 }
+
 /*soit after ou un autre div ....avec cette derniere on peut l animer de maniere dynamique xD*/
-.fighter::after{
+.barre{
+    overflow: hidden;
+    left: -50px;
     position :absolute;
     content: "";
-    background-color:#fff;
-    width: 80px;
+    background-color:#fff; /**/
+    width: 10%;
     height: 500px;
-    transform: rotate(30deg);
+    transform: rotate(20deg);
     transform-origin: 200px 100px;
-    animation:poseX 1s ease-in-out 1s forwards
+    /* animation:poseX 0.8s ease-in-out 0.45s forwards */
+    z-index: 10;
 }
 
 /*positionnement svt x image*/
@@ -55,10 +57,137 @@ html {
         transform: translateX(500px);
     }
 }
+@keyframes poseX_rev {
+    0%{
+        transform: translateX(600px);
+    }
+    100%{
+        
+        transform: translateX(0px) rotate(20deg);
+    }
+}
 
+
+@keyframes reverseX {
+    0%{
+        width: 500px;
+    }
+    100%{
+        width: 0px;
+    }
+}
 /*affichage perso xD*/
 @keyframes affichePerso {
     100%{
         width:500px;
     }
 }
+
+
+/*notre minicard de navigation xD*/
+.miniCard{
+  
+    position: absolute;
+    width: 100%;
+    top:80%;
+    left: 30%;
+    z-index:100;
+  }
+  
+  .cardxD , .arrow-prev, .arrow-next{
+    
+    position:absolute;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    width:10%;
+    height: 20vh;
+    background-color: #e7e0e0;
+    border-radius: 10%;
+    transition: 0.4s ease-out;
+  }
+  /* arrows mini-slide xD */
+  .arrow-prev, .arrow-next{
+    opacity: 0;
+    z-index: 9999999999999;
+    transform:translateX(-105%);
+  }
+  .arrow-prev{
+    transform:translateX(-105%);
+  }
+   .arrow-next{
+    transform:translateX(105%);
+  }
+  /* arrows mini-slide xD */
+  
+  .cardxD .slidexD img{
+    width: 100%;
+    height: 50%;
+  }
+  /*fin minicard nav xD*/
+  
+  /*card-arrows xD*/
+  
+  /*animation prev mini-slide xD*/
+  @keyframes anim-p {
+    0%{
+      opacity: 0;
+      transform:translateX(-120%)
+    }
+    100%{
+      opacity: 1;
+      transform:translateX(-105%)
+    }
+  }
+  
+  @keyframes anim-n {
+    0%{
+      transform:translateX(90%)
+    }
+    100%{
+      transform:translateX(105%)
+    }
+  }
+  @keyframes anim-m {
+    0%{
+  
+      transform:translateX(-15%)
+    }
+    100%{
+  
+      transform:translateX(0%)
+    }
+  }
+  
+  @keyframes anim-pn {
+    0%{
+      transform:translateX(90%)
+    }
+    100%{
+      transform:translateX(105%)
+    }
+  }
+  
+/*anim mini slide*/  
+
+
+ /*arrows*/
+ .arrow-n , .arrow-p{
+  position: absolute;
+  font-size: 50px;
+  color: rgb(20, 20, 20);
+  cursor: pointer;
+  display: inline-block;
+  left: 15%;
+  transform: rotate(-90deg);
+  
+}
+
+
+.arrow-n {
+  top: 35%;
+}
+.arrow-p{
+  top: 45%;
+}
+/*fin arrows xD*/
