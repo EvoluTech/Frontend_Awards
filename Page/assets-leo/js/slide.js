@@ -121,7 +121,7 @@ function init(tab,e){
     for(var i = 0 ; i<n ;i++){
       if(tab[i][p]==0){
         //A regler xD
-        tab[i].style.zIndex=""+(i-1)+"";
+        tab[i].style.zIndex=""+(n-1)+"";
         tab[i].style.animation="affichePerso 0.001s ease-in-out 0.08s forwards";
       }
     }
