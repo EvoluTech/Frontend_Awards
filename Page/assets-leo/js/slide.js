@@ -3,36 +3,13 @@
 var t = document.querySelectorAll(".cardxD");
 var img = document.querySelectorAll(".default");
 var barre = document.querySelector(".barre");
-var b_img= ["url('../Page/assets-leo/assassin.png')" , "url('../Page/assets-leo/fighter.png')","url('../Page/assets-leo/assassin.png')"]
+var b_img= ["url('../Page/assets-leo/assassin.png')" , "url('../Page/assets-leo/fighter.png')","url('../Page/assets-leo/ekko.jpg')"]
 var i=0;
 
 //init img
 for(var j=0;j<img.length;j++){
     img[j].style.backgroundImage=b_img[j];
 }
-
-//boucle infini des images xD
-// setInterval(() => {
-//     if(i==0){
-//         img[i].style.animation="affichePerso 0.8s ease-in-out 0.5s forwards";
-//     }
-//     else if(i==img.length){
-//         img[i-1].style.zIndex="-1";
-//         i=0;
-//         img[i].style.zIndex="2";
-//         barre.style.animation="poseX 0.8s ease-in-out  forwards"
-//         img[i].style.animation="affichePerso 0.8s ease-in-out 0.08s forwards";
-//     }else{
-        
-//         img[i-1].style.zIndex="1";
-//         img[i].style.zIndex="0";
-//         img[i].style.width="500px";
-//         barre.style.animation="poseX_rev 0.885s ease-in-out  forwards"
-//         img[i-1].style.animation="reverseX 0.8s ease-in-out forwards";
-//     }
-//     i++
-// }, 2000);
-
 
 /*slide img*/
 //a regler!!!
@@ -67,7 +44,7 @@ function previous(tab){
         console.log('prev =0')
         //a regler xD
         tab[i].style.zIndex=""+(n)+"";
-        tab[i].style.width="500px";
+        tab[i].style.width="400px";
         tab[i].style.animation="";
         
     }
@@ -107,7 +84,7 @@ function nextxD(tab){
         tab[i].style.zIndex=""+n+"";
         barre.style.zIndex=""+n+1+"";
 
-        tab[i].style.animation="reverseX 0.8s ease-in-out forwards";
+        tab[i].style.animation="reverseX 0.8s ease-in-out  forwards";
 
     }
     tab[i][p]-=1;
@@ -145,7 +122,6 @@ function init(tab,e){
       if(tab[i][p]==0){
         //A regler xD
         tab[i].style.zIndex=""+(i-1)+"";
-        barre.style.animation="poseX 0.8s ease-in-out  forwards";
         tab[i].style.animation="affichePerso 0.001s ease-in-out 0.08s forwards";
       }
     }
@@ -154,12 +130,12 @@ function init(tab,e){
 }
 //***amboaro ito fa aza kamo2 xD!!! */
 function barrexD(v){
-  if(v=="prev"){
-    barre.style.transform="";
-    barre.style.animation="";
-  }else if(v=="next"){
-    barre.style.transform="";
-    barre.style.animation="";
+  if(v=="next"){
+    barre.style.transform="translateX(600px)";
+    barre.style.animation="poseX_rev 1s ease-in-out 0.01s forwards";
+  }else if(v=="prev"){
+    barre.style.transform="translateX(0px) rotate(20deg)";
+    barre.style.animation="poseX 0.8s ease-in-out 0.01s forwards";
   }
 }
 var value;
@@ -172,7 +148,8 @@ init(img,e);
 //afaka ameliorena ny animation xD(genre plus fluide et plus concret xD)
 /*prev arrow xD*/
 prev.addEventListener("click" , function(){
-
+  value="prev";
+  barrexD(value);
   initZ(img)
   test=true;
   init_p(t);
@@ -186,6 +163,8 @@ prev.addEventListener("click" , function(){
 })
 /*next arrow*/
 next.addEventListener("click", function(){
+  value="next";
+  barrexD(value);
   initZ(img)
   test=false;
   init_n(t);
